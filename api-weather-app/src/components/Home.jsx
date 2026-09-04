@@ -7,7 +7,7 @@ const Home = () => {
 
 const [zipCode, setZipCode] = useState("");
 
-const [weather, setWeather] = useState("");
+const [weather, setWeather] = useState(null);
 
 const handleOnClick = async () =>{
     try{
@@ -17,7 +17,6 @@ const handleOnClick = async () =>{
     } catch (error) {
         console.error(error);
     }
-    // getWeather();
 };
  
 // useEffect(() =>{
@@ -37,8 +36,7 @@ const handleOnClick = async () =>{
 
     return (
 
-        <div>
-            <h1>Home Page</h1>
+        
             <div className="weather-card" >
                 <h1> Open Weather API</h1>
                 <h3>Weather App</h3>
@@ -47,22 +45,20 @@ const handleOnClick = async () =>{
 
                 {weather && (
                 <div className="weather-info">
-                    <h3 className="city-name">{weather.name} </h3>
-                    <p className="date">{weather.date}</p>
-                    <p className="temperature">Temperature: {weather.temperature}F</p>
-                    <p className="description">Conditions{weather.description}</p>
-                    <p className ="wind-speed">{weather.speed}</p>
+                    <h3>{weather.name} </h3>
+                    <p>Temperature: {weather.main.temp}°F</p>
+                    <p>Conditions: {weather.weather[0].description}</p>
+                    <p>Wind Speed: {weather.wind.speed} m/s</p>
                 </div>
                 )
                 }
             </div>
           
 
-        </div>
+       
 
     )
 
 }
 export default Home
 
-/**Many issues with the  */

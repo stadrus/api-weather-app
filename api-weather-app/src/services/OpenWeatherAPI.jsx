@@ -17,15 +17,16 @@ export async function fetchWeather(zipCode) {
     const data= await response.json();
     console.log(data)
     
+    return data;
+}
 
-    /*Open Weather JSON API Formats per API Docs
+    /**Open Weather JSON API Formats per API Docs
 
        ('#zip').text(data.zip);
         ('#city-name').text(data.name);
         ('#lat').text(data.lat);
         ('#lon').text(data.lon);
         ('#country').text(data.country);
-        ('#date').text(moment().format('MMMM DO YYYY, h:mm:ss a'));
         ('#temperature').html(`${data.main.temp}F`);
         ('#description').text(data.weather[0].description);
         ('#wind-speed').html(`Wind speed: ${data.wind_speed} m/s`);
@@ -34,9 +35,5 @@ export async function fetchWeather(zipCode) {
 // useEffect(() =>{
 //     fetchWeather();
 // },[])
-}
-
-fetchWeather();
-
 
 // export default OpenWeatherAPI

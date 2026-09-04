@@ -1,11 +1,11 @@
 .weather-card{
-    background-color: black;
+    background-color: white;
     border-radius: 20px;
-    padding: 20px;
+    padding: 50px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease-in-out ;
     width: 450px;
-    color: aqua;
+    color: green;
 }
 .weather-card:hover{
     transform: scale(1.05);
@@ -33,6 +33,6 @@
     border-radius: 5px;
 }
 .weather-info{
-    display: none;
-    
+    color: black;
+    padding: 20px;
 }
