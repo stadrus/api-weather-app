@@ -1,1 +1,38 @@
-
+.weather-card{
+    background-color: black;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out ;
+    width: 450px;
+    color: aqua;
+}
+.weather-card:hover{
+    transform: scale(1.05);
+}
+.city-input{
+    padding: 15px;
+    margin: 10px 0;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.city-input:focus{
+    outline: none;
+    border-color: blueviolet;
+}
+.city-input::placeholder{
+    color: black;
+}
+.get-weather-btn{
+    padding: 10px;
+    background-color: blanchedalmond;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
+.weather-info{
+    display: none;
+    
+}
